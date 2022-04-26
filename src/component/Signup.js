@@ -34,7 +34,7 @@ export default function SignUp() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth)
     .then((userCredential) => {
     // Signed in
     const user = userCredential.user;

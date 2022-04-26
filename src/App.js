@@ -1,41 +1,41 @@
-import { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import SignIn from './component/SignIn';
 import SignUp from './component/Signup';
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <App />
-    </div>
+      <Router>
+          <div>
+              <nav>
+                  <ul>
+                      <li>
+                          <Link to="/signin">SignIn</Link>
+                      </li>
+                      <li>
+                          <Link to="/signup">SignUp</Link>
+                      </li>
+                  </ul>
+              </nav>
+
+              {/* A <Switch> looks through its children <Route>s and
+          renders the first one that matches the current URL. */}
+              <Routes>
+                  <Route exect path="/signin" element={<SignIn/>}  />
+                  <Route exect path="/signup" element={<SignUp/>}  />
+              </Routes>
+          </div>
+      </Router>
   );
 }
-class Root extends Component {
-  render() {
-    return <h1>rootです</h1>;
-  }
-}
-class PageA extends Component {
-  render() {
-    return <h2>PageA</h2>;
-  }
-}
-class PageB extends Component {
-  render() {
-    return <h2>PageB</h2>;
-  }
+
+
+function signin() {
+  return <h2>SignIn</h2>;
 }
 
-export default class App extends Component{
-  render() {
-    return (
-      <BrowserRouter>
-        <h1>ルーティング先を選択</h1>
-        <Route exact path='/' component={Root} />
-        <Route path='/pageA' component={PageA} />
-        <Route path='/PageB' component={PageB} />
-      </BrowserRouter>
-    );
-  }
+function signup() {
+  return <h2>SignUp</h2>;
 }
