@@ -5,6 +5,10 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import app from "../firebase";
+import { initializeApp } from "firebase/app";
+import { getFirestore}  from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 
 export default function Plactice() {
     return (
@@ -19,7 +23,7 @@ export default function Plactice() {
                             <Link to="/about">About</Link>
                         </li>
                         <li>
-                            <Link to="/aaaa">aaaa</Link>
+                            <Link to="/name">Name</Link>
                         </li>
                     </ul>
                 </nav>
@@ -29,7 +33,7 @@ export default function Plactice() {
                 <Routes>
                     <Route exect path="/about" element={<About/>}  />
                     <Route exect path="/aaaa" element={<Aaaa/>}  />
-                    <Route exect path="/" element={<Home/>}  />
+                    <Route exect path="/name" element={<Name/>}  />
                 </Routes>
             </div>
         </Router>
@@ -46,4 +50,22 @@ function About() {
 
 function Aaaa() {
     return <h2>aaaa</h2>;
+}
+function Name() {
+    const db = getFirestore(app);
+     function getArtist() {
+        const docRef = doc(db, "artists", "1");
+        getDoc(docRef).then((docSnap) => {
+            if (docSnap.exists()) {
+                console.log("Document data:", docSnap.data());
+               } else {
+                // doc.data() will be undefined in this case
+                console.log("No such document!");
+           }
+        });
+
+    
+    }
+    return <button onClick={getArtist}>name</button>
+    
 }
