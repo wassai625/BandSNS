@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import SignIn from './component/SignIn';
 import SignUp from './component/Signup';
-import Info from './component/Info';
+import Home from './component/Home';
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
               <nav>
                   <ul>
                       <li>
-                          <Link to="/info">Info</Link>
+                          <Link to="/info">Home</Link>
                       </li>
                       <li>
                           <Link to="/signin">SignIn</Link>
@@ -28,22 +28,10 @@ export default function App() {
               <Routes>
                   <Route exect path="/signin" element={<SignIn/>}  />
                   <Route exect path="/signup" element={<SignUp/>}  />
-                  <Route exect path='/info' element={<Info/>} />
+                  <Route exect path='/home' element={<Home/>} />
               </Routes>
           </div>
       </Router>
   );
 }
 
-
-function signin() {
-  return <h2>SignIn</h2>;
-}
-
-function signup() {
-  return <h2>SignUp</h2>;
-}
-
-function info() {
-    return <h2>Info</h2>;
-}
