@@ -23,7 +23,7 @@ function Widgets() {
 
         <TwitterTimelineEmbed
           sourceType="profile"
-          screenName="Shin_Engineer"
+          screenName="harapeko_wassai"
           options={{ height: 400 }}
         />
         <TwitterShareButton

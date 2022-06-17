@@ -11,6 +11,7 @@ import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Button } from "@mui/material";
 import "./Sidebar.css";
+import { SearchBox } from "react-instantsearch-dom";
 
 function Sidebar() {
   return (
@@ -20,7 +21,7 @@ function Sidebar() {
 
       {/* SidebarOption */}
       <SidebarOption text="ホーム" Icon={HomeIcon} active />
-      <SidebarOption text="話題を検索" Icon={SearchIcon} />
+      <SidebarOption text="ライブを検索" Icon={SearchIcon} />
       <SidebarOption text="通知" Icon={NotificationsNoneIcon} />
       <SidebarOption text="メッセージ" Icon={MailOutlineIcon} />
       <SidebarOption text="ブックマーク" Icon={BookmarkBorderIcon} />

@@ -9,7 +9,7 @@ import {
   orderBy,
   query,
 } from "firebase/firestore";
-import FlipMove from "react-flip-move";
+
 
 function Timeline() {
   const [posts, setPosts] = useState([]);
@@ -37,7 +37,7 @@ function Timeline() {
       <TweetBox />
 
       {/* Post */}
-      <FlipMove>
+      
         {posts.map((post) => (
           <Post
             key={post.text}
@@ -49,7 +49,7 @@ function Timeline() {
             image={post.image}
           />
         ))}
-      </FlipMove>
+      
     </div>
   );
 }
