@@ -15,6 +15,7 @@
     "react": ">=16.8.0",
     "react-dom": "^18.0.0",
     "react-flip-move": "^3.0.4",
+    "react-instantsearch-dom": "^6.27.0",
     "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
