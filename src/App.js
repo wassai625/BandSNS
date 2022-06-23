@@ -4,6 +4,7 @@ import './App.css';
 import SignIn from './component/SignIn';
 import SignUp from './component/Signup';
 import Home from './component/Home';
+import Search from './component/pages/sidebar/sidebarDetail/Search';
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
                   <Route exect path="/signin" element={<SignIn/>}  />
                   <Route exect path="/signup" element={<SignUp/>}  />
                   <Route exect path='/home' element={<Home/>} />
+                  <Route exect path='/Search' element={<Search />} />
               </Routes>
           </div>
       </Router>
