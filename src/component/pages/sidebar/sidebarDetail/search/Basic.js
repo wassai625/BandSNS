@@ -84,5 +84,4 @@ function Basic(props) {
         </Grid>
     )
 }
-
-export default Basic
+export default Basic;

@@ -1,7 +1,7 @@
 import { Grid } from '@material-ui/core'
 import React, { useContext } from "react";
 import { Button } from "@material-ui/core";
-import { UserInputData } from "./Content";
+import { UserInputData } from "../Search";
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -80,4 +80,4 @@ function Confirm(props) {
     )
 }
 
-export default Confirm
+export default Confirm;
